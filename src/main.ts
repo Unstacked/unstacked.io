@@ -1,23 +1,34 @@
+import { join } from 'path';
 import { App, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { static_site } from 'pwed-cdk';
+import { Account } from './constant';
 
-export class MyStack extends Stack {
+export class UnstackedIoSite extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
     super(scope, id, props);
 
-    // define resources here...
+    new static_site.StaticSite(this, 'UnstackedIoSite', {
+      domain: 'unstacked.io',
+      alternativeDomains: [
+        'unstacked.cloud',
+        'unstacked.xyz',
+        'unstacked.me',
+        'unstacked.media',
+        'unstacked.online',
+      ],
+      path: join(__dirname, '..', 'website', 'dist'),
+    });
   }
 }
 
-// for development, use account/region from cdk cli
-const devEnv = {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION,
+const env = {
+  account: Account.WORKLOAD,
+  region: 'us-east-1',
 };
 
 const app = new App();
 
-new MyStack(app, 'my-stack-dev', { env: devEnv });
-// new MyStack(app, 'my-stack-prod', { env: prodEnv });
+new UnstackedIoSite(app, 'UnstackedIoWebsite', { env: env });
 
 app.synth();

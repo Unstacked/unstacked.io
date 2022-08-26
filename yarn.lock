@@ -1235,7 +1235,7 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-aws-cdk-lib@^2.1.0:
+aws-cdk-lib@^2.39.0:
   version "2.39.0"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.39.0.tgz#4461deb7f3daac603dc2684d6be4280c38f00489"
   integrity sha512-YhXSE6bGS8hQxYygftp3VbaFEz19wl4B1tUAjKjW1rNs3ZpNGnW6o1AVA3Yuc5DlaELrIjXxF0/f+5SvSpYkTA==
@@ -1250,7 +1250,7 @@ aws-cdk-lib@^2.1.0:
     semver "^7.3.7"
     yaml "1.10.2"
 
-aws-cdk@^2.1.0:
+aws-cdk@^2.39.0:
   version "2.39.0"
   resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.39.0.tgz#9ba44544d97f7d114fc7a358fb17e0e414283ed0"
   integrity sha512-qoezvJBLSLuUWioxVbxJU8n2BmZH05D9n/b9dgA6pcldchGK+xxvRzWNI2G/nmrT+l5AyPWxq7u0WbmOge6zrw==
@@ -4382,10 +4382,10 @@ pupa@^3.1.0:
   dependencies:
     escape-goat "^4.0.0"
 
-pwed-cdk@^0.0.56:
-  version "0.0.56"
-  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.56.tgz#a0c342c925c2d26385a27bb7b09668931106f224"
-  integrity sha512-mSpb49uGioNFLx1nXrye8j+d0DIKRZ2QWmJLZ5VnlXfyFS5wm3qyM46WQ6bS/2aeCn4zm38jueEa5HxVaDPfoA==
+pwed-cdk@0.0.58:
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.58.tgz#594122efe2833547ef97b5bdc8d73e3021869633"
+  integrity sha512-Ew0ktHxrX0pinR8yfvxxWiy0Xro+sfL5swBSdwNcTBpzvf+RWfNGO0XaDg7EOiE9j9SEFjs9l9c5ymEuReco5w==
   dependencies:
     cdk-ec2-key-pair "^3.3.1"
     cdk-iam-floyd "0.300.0"

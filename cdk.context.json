@@ -1,0 +1,26 @@
+{
+  "hosted-zone:account=806124249357:domainName=unstacked.io:region=us-east-1": {
+    "Id": "/hostedzone/Z04548201JBR9N1ZDERZ2",
+    "Name": "unstacked.io."
+  },
+  "hosted-zone:account=806124249357:domainName=unstacked.cloud:region=us-east-1": {
+    "Id": "/hostedzone/Z09300799QO0L1DG3106",
+    "Name": "unstacked.cloud."
+  },
+  "hosted-zone:account=806124249357:domainName=unstacked.xyz:region=us-east-1": {
+    "Id": "/hostedzone/Z04561051B2CQ19N7BDSI",
+    "Name": "unstacked.xyz."
+  },
+  "hosted-zone:account=806124249357:domainName=unstacked.me:region=us-east-1": {
+    "Id": "/hostedzone/Z045485534J01XKZ7PLBG",
+    "Name": "unstacked.me."
+  },
+  "hosted-zone:account=806124249357:domainName=unstacked.media:region=us-east-1": {
+    "Id": "/hostedzone/Z05214061HCS1ICGTNJY3",
+    "Name": "unstacked.media."
+  },
+  "hosted-zone:account=806124249357:domainName=unstacked.online:region=us-east-1": {
+    "Id": "/hostedzone/Z0446290BZI9KI07JSNL",
+    "Name": "unstacked.online."
+  }
+}
