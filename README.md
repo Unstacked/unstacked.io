@@ -1,6 +1,6 @@
 # Unstacked.io
 
-![logo](website/dist/favicon.png)
+![logo](website/public/favicon.png)
 
 [UNSTACKED](https://unstacked.io) Website.
 

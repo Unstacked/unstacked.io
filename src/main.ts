@@ -18,6 +18,7 @@ export class UnstackedIoSite extends Stack {
         'unstacked.online',
       ],
       path: join(__dirname, '..', 'website', 'dist'),
+      enablePrettyPaths: true,
     });
   }
 }

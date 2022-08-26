@@ -651,6 +651,17 @@ exports[`Snapshot 1`] = `
             ],
             "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
             "Compress": true,
+            "FunctionAssociations": [
+              {
+                "EventType": "viewer-request",
+                "FunctionARN": {
+                  "Fn::GetAtt": [
+                    "UnstackedIoSitePrettyPathHandler617786B0",
+                    "FunctionARN",
+                  ],
+                },
+              },
+            ],
             "TargetOriginId": "testUnstackedIoSiteDistributionOrigin146207A76",
             "ViewerProtocolPolicy": "redirect-to-https",
           },
@@ -701,6 +712,32 @@ exports[`Snapshot 1`] = `
       },
       "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
     },
+    "UnstackedIoSitePrettyPathHandler617786B0": {
+      "Properties": {
+        "AutoPublish": true,
+        "FunctionCode": ""use strict";
+function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+    // Check whether the URI is missing a file name.
+    if (uri.endsWith('/')) {
+        request.uri += 'index.html';
+    }
+    // Check whether the URI is missing a file extension.
+    else if (!uri.includes('.')) {
+        request.uri += '/index.html';
+    }
+    return request;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJldHR5UGF0aEhhbmRsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvbGliL3N0YXRpYy1zaXRlL3ByZXR0eVBhdGhIYW5kbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFJQSxTQUFTLE9BQU8sQ0FBQyxLQUFtQjtJQUNsQyxJQUFJLE9BQU8sR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDO0lBQzVCLElBQUksR0FBRyxHQUFHLE9BQU8sQ0FBQyxHQUFHLENBQUM7SUFFdEIsZ0RBQWdEO0lBQ2hELElBQUksR0FBRyxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsRUFBRTtRQUNyQixPQUFPLENBQUMsR0FBRyxJQUFJLFlBQVksQ0FBQztLQUM3QjtJQUNELHFEQUFxRDtTQUNoRCxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsRUFBRTtRQUMzQixPQUFPLENBQUMsR0FBRyxJQUFJLGFBQWEsQ0FBQztLQUM5QjtJQUVELE9BQU8sT0FBTyxDQUFDO0FBQ2pCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbnRlcmZhY2UgcmVxdWVzdEV2ZW50IHtcbiAgcmVxdWVzdDogeyB1cmk6IHN0cmluZyB9O1xufVxuXG5mdW5jdGlvbiBoYW5kbGVyKGV2ZW50OiByZXF1ZXN0RXZlbnQpIHtcbiAgdmFyIHJlcXVlc3QgPSBldmVudC5yZXF1ZXN0O1xuICB2YXIgdXJpID0gcmVxdWVzdC51cmk7XG5cbiAgLy8gQ2hlY2sgd2hldGhlciB0aGUgVVJJIGlzIG1pc3NpbmcgYSBmaWxlIG5hbWUuXG4gIGlmICh1cmkuZW5kc1dpdGgoJy8nKSkge1xuICAgIHJlcXVlc3QudXJpICs9ICdpbmRleC5odG1sJztcbiAgfVxuICAvLyBDaGVjayB3aGV0aGVyIHRoZSBVUkkgaXMgbWlzc2luZyBhIGZpbGUgZXh0ZW5zaW9uLlxuICBlbHNlIGlmICghdXJpLmluY2x1ZGVzKCcuJykpIHtcbiAgICByZXF1ZXN0LnVyaSArPSAnL2luZGV4Lmh0bWwnO1xuICB9XG5cbiAgcmV0dXJuIHJlcXVlc3Q7XG59XG4iXX0=",
+        "FunctionConfig": {
+          "Comment": "us-east-1testUnstackedIoSitePrettyPathHandlerA5C72912",
+          "Runtime": "cloudfront-js-1.0",
+        },
+        "Name": "us-east-1testUnstackedIoSitePrettyPathHandlerA5C72912",
+      },
+      "Type": "AWS::CloudFront::Function",
+    },
     "UnstackedIoSiteStaticDeploymentAwsCliLayerE1C96417": {
       "Properties": {
         "Content": {
@@ -735,7 +772,7 @@ exports[`Snapshot 1`] = `
           "cdk-hnb659fds-assets-806124249357-us-east-1",
         ],
         "SourceObjectKeys": [
-          "809b5991c66ad02196f7b67818deca766c6941e3989f4f0e118855e894e0f480.zip",
+          "04a1a96a10e892598074c16d4e6674ba5c5debd62aac21553f4d3fffb5eef973.zip",
         ],
       },
       "Type": "Custom::CDKBucketDeployment",

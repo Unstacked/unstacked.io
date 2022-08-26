@@ -4382,10 +4382,10 @@ pupa@^3.1.0:
   dependencies:
     escape-goat "^4.0.0"
 
-pwed-cdk@0.0.58:
-  version "0.0.58"
-  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.58.tgz#594122efe2833547ef97b5bdc8d73e3021869633"
-  integrity sha512-Ew0ktHxrX0pinR8yfvxxWiy0Xro+sfL5swBSdwNcTBpzvf+RWfNGO0XaDg7EOiE9j9SEFjs9l9c5ymEuReco5w==
+pwed-cdk@0.0.60:
+  version "0.0.60"
+  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.60.tgz#d8f9330c7619a5cf3b69036b06c6daa3be4d6fa5"
+  integrity sha512-Ar1w/b+2YaBOWh6ml7s3ZVqFmrJUvR0QxtQMOj/4JfrcRlmVO+NVKW5TUsXkWxN5b3F2F0n2+xL/PjT1lu4tzQ==
   dependencies:
     cdk-ec2-key-pair "^3.3.1"
     cdk-iam-floyd "0.300.0"
