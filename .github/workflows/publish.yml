@@ -1,11 +1,9 @@
 name: publish
 
 on:
-  workflow_run:
-    workflows:
-      - "build"
-    types:
-      - completed
+  push:
+    branches:
+      - main
 permissions:
   id-token: write
   contents: read
@@ -15,6 +13,12 @@ jobs:
     env:
       CI: "true"
     steps:
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::806124249357:role/test-github-connect
+          role-session-name: workflow-session
+          aws-region: us-east-1
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -22,13 +26,5 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
       - name: Install dependencies
         run: yarn install --check-files
-      - name: build
-        run: npx projen build
-      - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::806124249357:role/test-github-connect
-          role-session-name: workflow-session
-          aws-region: us-east-1
       - name: deploy
         run: npx projen deploy
