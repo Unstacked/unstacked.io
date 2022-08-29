@@ -20,13 +20,15 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   },
   devContainer: true,
   scripts: {
-    'astro:dev': 'npm run --prefix website dev',
-    'astro:start': 'npm run --prefix website start',
-    'astro:build': 'npm run --prefix website build',
-    'astro:install': 'npm ci --prefix website',
-    astro: 'npm run --prefix website astro',
+    'astro:dev': 'yarn --cwd website dev',
+    'astro:start': 'yarn --cwd website start',
+    'astro:build': 'yarn --cwd website build',
+    'astro:install': 'yarn install --cwd website',
+    astro: 'yarn --cwd website astro',
   },
   buildCommand: 'yarn astro:install && yarn astro:build',
   stale: true,
+  eslint: false,
+  jest: false,
 });
 project.synth();

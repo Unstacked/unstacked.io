@@ -4,7 +4,7 @@
       "name": "astro",
       "steps": [
         {
-          "exec": "npm run --prefix website astro"
+          "exec": "yarn --cwd website astro"
         }
       ]
     },
@@ -12,7 +12,7 @@
       "name": "astro:build",
       "steps": [
         {
-          "exec": "npm run --prefix website build"
+          "exec": "yarn --cwd website build"
         }
       ]
     },
@@ -20,7 +20,7 @@
       "name": "astro:dev",
       "steps": [
         {
-          "exec": "npm run --prefix website dev"
+          "exec": "yarn --cwd website dev"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "name": "astro:install",
       "steps": [
         {
-          "exec": "npm ci --prefix website"
+          "exec": "yarn install --cwd website"
         }
       ]
     },
@@ -36,7 +36,7 @@
       "name": "astro:start",
       "steps": [
         {
-          "exec": "npm run --prefix website start"
+          "exec": "yarn --cwd website start"
         }
       ]
     },
@@ -152,15 +152,6 @@
         }
       ]
     },
-    "eslint": {
-      "name": "eslint",
-      "description": "Runs eslint against the codebase",
-      "steps": [
-        {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools projenrc .projenrc.ts"
-        }
-      ]
-    },
     "package": {
       "name": "package",
       "description": "Creates the distribution package"
@@ -202,33 +193,7 @@
     },
     "test": {
       "name": "test",
-      "description": "Run tests",
-      "steps": [
-        {
-          "exec": "jest --passWithNoTests --all --updateSnapshot"
-        },
-        {
-          "spawn": "eslint"
-        }
-      ]
-    },
-    "test:update": {
-      "name": "test:update",
-      "description": "Update jest snapshots",
-      "steps": [
-        {
-          "exec": "jest --updateSnapshot"
-        }
-      ]
-    },
-    "test:watch": {
-      "name": "test:watch",
-      "description": "Run jest in watch mode",
-      "steps": [
-        {
-          "exec": "jest --watch"
-        }
-      ]
+      "description": "Run tests"
     },
     "upgrade": {
       "name": "upgrade",
