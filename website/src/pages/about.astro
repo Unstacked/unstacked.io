@@ -1,0 +1,18 @@
+---
+import DefaultPageLayout from '$/layouts/default.astro'
+import Prose from '$/components/Prose.astro'
+
+const title = 'About';
+const description = 'Unstacked strives to make cloud easy and fun!';
+---
+<DefaultPageLayout content={{ title, description }}>
+    <Prose>
+        
+    </Prose>
+</DefaultPageLayout>
+
+<style>
+    .author {
+        @apply flex flex-col w-full
+    }
+</style>

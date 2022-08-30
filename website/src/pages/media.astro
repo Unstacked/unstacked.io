@@ -1,0 +1,23 @@
+---
+import DefaultPageLayout from '$/layouts/default.astro'
+import MediaPreviewList from '$/components/MediaPreviewList.astro'
+import posts from '$/data/unstacked-media.json'
+
+let title = 'Youtube Videos';
+let description = 'All the great videos on Unstacked we could find for you!'
+
+let formatedPosts = []
+
+posts.map((post) => {
+    let date = post.date.toString();
+    formatedPosts.push({
+        title: post.title,
+        //fix date format
+        date: `${date.slice(0,4)}-${date.slice(4,6)}-${date.slice(6,8)}`,
+        url: post.url,
+    })
+})
+---
+<DefaultPageLayout content={{ title, description }}>
+    <MediaPreviewList posts={formatedPosts} />
+</DefaultPageLayout>
