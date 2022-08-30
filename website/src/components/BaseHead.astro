@@ -1,0 +1,65 @@
+---
+    import { SITE } from '$/config'
+    import '../styles/global.css'
+    import '@fontsource/fira-code'
+
+    export type Props = {
+        title: string
+        description: string
+        permalink?: string
+        image?: string
+    }
+
+    const { title = SITE.title , description, permalink, image } = Astro.props as Props
+---
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{title}</title>
+    <meta name="title" content={title}/>
+    {description &&
+        <meta name="description" content={description}/>
+    }
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph Tags (Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    {permalink &&
+        <meta property="og:url" content={permalink} />
+    }
+    {description &&
+        <meta property="og:description" content={description} />
+    }
+    {image &&
+        <meta property="og:image" content={image} />
+    }
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    {permalink &&
+        <meta property="twitter:url" content={permalink} />
+    }
+    {description &&
+        <meta property="twitter:description" content={description} />
+    }
+    {image &&
+        <meta property="twitter:image" content={image} />
+    }
+
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-ZBCT2JY504"></script>
+    <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZBCT2JY504');
+    </script>
+    <script>
+        if (window.location.hostname != 'unstacked.io' && location.hostname != 'localhost') {
+            window.location.href = 'https://unstacked.io'
+        }
+    </script>

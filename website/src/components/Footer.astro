@@ -1,0 +1,15 @@
+---
+    import { SITE } from '$/config'
+    import NetlifyIdentity from './NetlifyIdentity.svelte'
+---
+<footer class="footer">
+    <nav class="nav">
+        <div>{new Date(Date.now()).getFullYear()}  &copy; Copyright notice |  <a href={ SITE.githubUrl } title={`${ SITE.name }'s Github URL'`}>{ SITE.name }</a></div>
+        <NetlifyIdentity client:load/>
+    </nav>
+</footer>
+<style>
+    .footer {
+        @apply py-6 border-t
+    }
+</style>
