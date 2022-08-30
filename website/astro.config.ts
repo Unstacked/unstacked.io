@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import svelte from '@astrojs/svelte';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import compress from "astro-compress";
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -26,7 +27,21 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), sitemap()],
+  }), sitemap(), compress({
+    css: true,
+    html: {
+      removeComments: true,
+      collapseInlineTagWhitespace: true,
+      minifyJS: true,
+      minifyCSS: true,
+    },
+    svg: {
+      multipass: true,
+    },
+    img: true,
+    js: true,
+    logger: 4,
+  })],
   vite: {
     plugins: [],
     resolve: {

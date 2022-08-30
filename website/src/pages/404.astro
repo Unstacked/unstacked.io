@@ -1,0 +1,38 @@
+---
+import DefaultPageLayout from '$/layouts/default.astro'
+import Card from '$/components/Card.astro'
+
+
+const title = '404'
+const description = 'Page not found'
+---
+<DefaultPageLayout content={{ title, description }} showPageHeader={false}>
+    <p>
+        You seem lost.
+    </p>
+    <ul role="list" class="link-card-grid">
+        <Card
+            href="/"
+            title="Home"
+            body="Lets get back to a safe area!"
+        />
+    </ul>
+</DefaultPageLayout>
+
+<style>
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+        margin: auto;
+	}
+</style>
