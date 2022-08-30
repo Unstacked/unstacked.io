@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^1.0.0",
+    "@astrojs/rss": "^1.0.0",
     "@fontsource/fira-code": "^4.5.11"
   }
 }

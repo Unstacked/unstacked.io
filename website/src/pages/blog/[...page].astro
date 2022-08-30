@@ -11,18 +11,6 @@ export async function getStaticPaths({ paginate, rss }) {
   const allPosts = await Astro.glob('./*.md');
   const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  // rss({
-  //   title: `${SITE.name} | Blog`,
-  //   description: SITE.description,
-  //   customData: `<language>en-us</language>`,
-  //   items: sortedPosts.map(item => ({
-  //     title: item.frontmatter.title,
-  //     description: item.frontmatter.description,
-  //     link: item.url,
-  //     pubDate: item.frontmatter.date,
-  //   })),
-  // })
-
     return paginate(sortedPosts, {
       pageSize: PAGE_SIZE
     })

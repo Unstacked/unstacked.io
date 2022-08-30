@@ -1,16 +1,18 @@
 ---
-export interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+    import { SITE } from '$/config'
+    import '../styles/global.css'
+	export interface Props {
+		title: string;
+		body: string;
+		href: string;
+	}
 
-const { href, title, body } = Astro.props as Props;
+	const { href, title, body } = Astro.props as Props;
 ---
 
 <li class="link-card">
 	<a href={href}>
-		<h2>
+		<h2 class="dark:text-primarySecondaryDark text-primarySecondary text-4xl">
 			{title}
 			<span>&rarr;</span>
 		</h2>
@@ -34,13 +36,11 @@ const { href, title, body } = Astro.props as Props;
 		line-height: 1.4;
 		padding: 1em 1.3em;
 		border-radius: 0.35rem;
-		opacity: 0.8;
 	}
 
 	h2, h2:visited {
 		margin: 0;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		@apply text-primarySecondary dark:text-primarySecondaryDark text-4xl
 	}
 
 	p {
