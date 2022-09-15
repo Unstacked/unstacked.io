@@ -1888,10 +1888,10 @@ pupa@^3.1.0:
   dependencies:
     escape-goat "^4.0.0"
 
-pwed-cdk@0.0.62:
-  version "0.0.62"
-  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.62.tgz#fb279e81be8142c3a157a2eea08969ed7139da50"
-  integrity sha512-hLeMupOqIgdwZRHi9Usi8ipEjvQmGcR+nlJxO9cXYwT7HQrDlU8DrBWLvZNIsvfvhgJcSOFKksHS92KnAIu38w==
+pwed-cdk@0.0.63:
+  version "0.0.63"
+  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.63.tgz#9642ee865362eea31ec41bf8cd5f279b61f57177"
+  integrity sha512-WdYC7AsI+2kQ54mBRMHjEB6dYbHivTzxgeitYZkJa7FT7O/dobImF8BEZsl2TW3934QVug/p6fCtVAolI/QjKw==
   dependencies:
     cdk-ec2-key-pair "^3.3.1"
     cdk-iam-floyd "0.300.0"
