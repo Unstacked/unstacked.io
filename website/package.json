@@ -28,7 +28,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.0.0",
+    "@astrojs/partytown": "^1.2.3",
     "@astrojs/rss": "^1.0.0",
     "@fontsource/fira-code": "^4.5.11",
     "svgo": "^2.8.0"
