@@ -24,5 +24,11 @@ jobs:
           types: |-
             feat
             fix
+            docs
+            style
+            refactor
+            test
             chore
+            revert
+            [Snyk]
           requireScope: false
