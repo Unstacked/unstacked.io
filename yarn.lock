@@ -638,10 +638,10 @@ cdk-ec2-key-pair@^3.3.1:
   resolved "https://registry.yarnpkg.com/cdk-ec2-key-pair/-/cdk-ec2-key-pair-3.3.1.tgz#b2e10aa1bb780bdcfe807221c19015d40ee4f0f3"
   integrity sha512-CmGy2ebHK+sZYJmylERt5QnsmFm/4Kjuqc0A3DdWTu28j+foAAPF5KjzgwRcNerqnwys56MI4zjWgNBiyXUPpA==
 
-cdk-iam-floyd@0.300.0:
-  version "0.300.0"
-  resolved "https://registry.yarnpkg.com/cdk-iam-floyd/-/cdk-iam-floyd-0.300.0.tgz#1cb165e724b8cfbdf28a63e5f9b5c24c52ba77a2"
-  integrity sha512-BPHzbC8NSpqAB89vP+QxSuF6vhAbKo+3yGc/G5W1R2znN35t9lQJKDysILZ7iXGbwGAQSrB/IYt6ilePtctoaQ==
+cdk-iam-floyd@0.504.0:
+  version "0.504.0"
+  resolved "https://registry.yarnpkg.com/cdk-iam-floyd/-/cdk-iam-floyd-0.504.0.tgz#31ea11da83e5fa1e3dfb4c2d7a25301a047f3f04"
+  integrity sha512-liSOGZCCM6t3oIAiCenmEUsRB1wMXbx1mMv6wdIz/ZtjWo5tEmrO6WjoyiOtYK+DPbsnkEgWoweNyLvj6H9SBQ==
   dependencies:
     "@udondan/common-substrings" "^3.0.2"
     regex-parser "^2.2.11"
@@ -2008,13 +2008,13 @@ pupa@^3.1.0:
   dependencies:
     escape-goat "^4.0.0"
 
-pwed-cdk@0.0.66:
-  version "0.0.66"
-  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.66.tgz#1c132635e5e04c606489e227f38b5af80683a6eb"
-  integrity sha512-sWZcZCbkL5ARYU0loLvMQc8AmYDAY3UyVN54Ihvmeu3mDdbLHOLExFBA39LDrTcZeRo2Q54hRdQ1OFQkWPGtVA==
+pwed-cdk@0.0.68:
+  version "0.0.68"
+  resolved "https://registry.yarnpkg.com/pwed-cdk/-/pwed-cdk-0.0.68.tgz#5d683569ac110ae4867aec44f4f85e029bbfd6f0"
+  integrity sha512-jNqsda6qlJftFtFGc4fLN8OQbBKV4L0VphI6L8w6oLVa6ALW2RWsrBEoiWzP+fDpIGo4mTFaolZRwIbGK7eD6Q==
   dependencies:
     cdk-ec2-key-pair "^3.3.1"
-    cdk-iam-floyd "0.300.0"
+    cdk-iam-floyd "0.504.0"
     glob "^8.0.3"
 
 queue-microtask@^1.2.2:
