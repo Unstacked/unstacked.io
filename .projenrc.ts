@@ -2,13 +2,9 @@ import { awscdk } from 'projen';
 import { TrailingComma } from 'projen/lib/javascript';
 const project = new awscdk.AwsCdkTypeScriptApp({
   githubOptions: {
-    pullRequestLintOptions: {
-      semanticTitleOptions: {
-        types: ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore', 'revert', "[Snyk]"],
-      }
-    }
+    pullRequestLint: false,
   },
-  cdkVersion: '2.84.0',
+  cdkVersion: '2.90.0',
   defaultReleaseBranch: 'main',
   name: 'unstacked.io',
 
