@@ -32,3 +32,4 @@ jobs:
             revert
             [Snyk]
           requireScope: false
+          githubBaseUrl: ${{ github.api_url }}
