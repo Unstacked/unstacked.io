@@ -18,6 +18,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   packageName: 'unstacked.io',
   projenrcTs: true,
   prettier: true,
+  workflowNodeVersion: "18",
   prettierOptions: {
     settings: {
       singleQuote: true,

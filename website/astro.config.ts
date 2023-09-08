@@ -15,7 +15,7 @@ const __dirname = dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
-  site:'https://unstacked.io',
+  site: 'https://unstacked.io',
   build: {
     format: 'directory'
   },
@@ -24,11 +24,13 @@ export default defineConfig({
     config: {
       forward: ["dataLayer.push"]
     }
-  }), svelte(), tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), sitemap(), compress({
+  }), svelte(),
+  // tailwind({
+  //   config: {
+  //     applyBaseStyles: false
+  //   }
+  // }),
+  sitemap(), compress({
     css: true,
     html: {
       removeComments: true,
@@ -51,7 +53,7 @@ export default defineConfig({
       }
     },
     optimizeDeps: {
-      allowNodeBuiltins: true
+      // allowNodeBuiltins: true
     }
   }
 });
