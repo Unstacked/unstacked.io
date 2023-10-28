@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "aws-cdk-lib": "^2.90.0",
-    "constructs": "^10.0.5",
+    "constructs": "^10.3.0",
     "pwed-cdk": "0.0.68"
   },
   "license": "Apache-2.0",
