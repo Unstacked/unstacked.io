@@ -30,7 +30,7 @@
     "postcss": "^8.0.9"
   },
   "dependencies": {
-    "@astrojs/partytown": "^2.0.0",
+    "@astrojs/partytown": "^2.0.2",
     "@astrojs/rss": "^2.0.0",
     "@fontsource/fira-code": "^4.5.11",
     "svgo": "^2.8.0"
