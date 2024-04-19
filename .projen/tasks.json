@@ -223,16 +223,13 @@
       },
       "steps": [
         {
-          "exec": "yarn upgrade npm-check-updates"
-        },
-        {
-          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/node,aws-cdk,esbuild,npm-check-updates,prettier,projen,ts-node,typescript,aws-cdk-lib,constructs,pwed-cdk"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=esbuild,prettier,projen,ts-node,typescript,pwed-cdk"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/node aws-cdk esbuild npm-check-updates prettier projen ts-node typescript aws-cdk-lib constructs pwed-cdk"
+          "exec": "yarn upgrade @types/node aws-cdk esbuild prettier projen ts-node typescript aws-cdk-lib constructs pwed-cdk"
         },
         {
           "exec": "npx projen"
